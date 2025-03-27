@@ -1,14 +1,15 @@
-# Codex of Reason
+# Codex of Reason – v1.1.0
 
-**Website for the Codex of Reason** — a platform for exploring axioms, logic, mathematics, and structured knowledge.
+**Codex of Reason** is a bilingual, web-based axiom editor built and maintained by **The Axion Forge**.
 
-Created and maintained by **The Axion Forge**.
+This version (v1.1.0) includes:
+- Bilingual Axiom Editor (RO/EN)
+- Editable fields for each axiom
+- Export to `.txt` file
+- Modern layout and styles
+- Ready for GitHub Pages deployment
 
-> A digital forge for abstract reasoning, theory crafting, and foundational exploration.
+> The project aims to provide a digital forge for structured theories, mathematical frameworks, and conceptual discovery.
 
-This site is the main publishing point for ongoing research and experimentation, leading toward a broader framework combining math, physics, and philosophical structure.
-
-## License
-
-This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-See the LICENSE.md file for full terms.
+Visit the live site:
+👉 https://theaxionforge.github.io/codex-of-reason/
