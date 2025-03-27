@@ -3,84 +3,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Codex of Reason – Axiom Editor</title>
+  <title>Codex of Reason</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background: #121212;
       color: #e0f7fa;
       font-family: 'Segoe UI', sans-serif;
+      text-align: center;
       padding: 2rem;
     }
     h1 {
-      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
       color: #61dafb;
     }
-    .axiom {
+    h2 {
+      font-weight: normal;
+      color: #a1c9f1;
+    }
+    p {
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+    nav {
+      margin-top: 2rem;
+    }
+    nav a {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
       background: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
+      color: #61dafb;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
     }
-    textarea {
-      width: 100%;
-      background: #262626;
-      color: #e0f7fa;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5rem;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      background: #61dafb;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 0.5rem;
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Codex of Reason – Axiom Editor</h1>
-  <div id="axiom-list"></div>
-  <button onclick="addAxiom()">➕ Add Axiom</button>
-  <button onclick="exportAxioms()">⬇️ Export</button>
-  <script>
-    let axiomCount = 0;
-
-    function addAxiom(ro = '', en = '') {
-      axiomCount++;
-      const div = document.createElement('div');
-      div.className = 'axiom';
-      div.innerHTML = `
-        <h3>Axiomă ${axiomCount}</h3>
-        <label>🇷🇴 RO</label>
-        <textarea placeholder="Axiomă în română">${ro}</textarea>
-        <label>🇬🇧 EN</label>
-        <textarea placeholder="Axiom in English">${en}</textarea>
-        <button onclick="this.parentElement.remove()">🗑️ Delete</button>
-      `;
-      document.getElementById('axiom-list').appendChild(div);
-    }
-
-    function exportAxioms() {
-      const axioms = document.querySelectorAll('.axiom');
-      let output = '';
-      axioms.forEach((ax, i) => {
-        const ro = ax.querySelectorAll('textarea')[0].value;
-        const en = ax.querySelectorAll('textarea')[1].value;
-        output += `Axiomă ${i+1} (RO):\n${ro}\nAxiom ${i+1} (EN):\n${en}\n\n`;
-      });
-      const blob = new Blob([output], { type: 'text/plain' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'axioms_export.txt';
-      a.click();
-    }
-  </script>
+  <h1>Codex of Reason</h1>
+  <h2>by The Axion Forge</h2>
+  <p>This is your prototype site for working with axioms, theories, and structured knowledge.</p>
+  <p>More features and content will appear here as your project evolves.</p>
+  <nav>
+    <a href="editor.html">✍️ Axiom Editor</a>
+    <a href="#">📚 Glossary (coming soon)</a>
+    <a href="#">📐 Theorems (coming soon)</a>
+  </nav>
+  <footer>© 2025 The Axion Forge</footer>
 </body>
 </html>
